@@ -119,7 +119,6 @@ class Config:
     
     
     def get_version() -> str:
-    """ get USERGE-X version """
     ver = f"{versions.__major__}.{versions.__minor__}.{versions.__micro__}"
     if Config.HEROKU_ENV:
         if not hasattr(Config, "HBOT_VERSION"):
