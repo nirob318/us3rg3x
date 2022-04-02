@@ -1,13 +1,3 @@
-# pylint: disable=missing-module-docstring
-#
-# Copyright (C) 2020 by UsergeTeam@Github, < https://github.com/UsergeTeam >.
-#
-# This file is part of < https://github.com/UsergeTeam/Userge > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/uaudith/Userge/blob/master/LICENSE >
-#
-# All rights reserved.
-
 __all__ = ["Config", "get_version"]
 
 import os
@@ -119,7 +109,7 @@ class Config:
     
     
     def get_version() -> str:
-    ver = f"{versions.__major__}.{versions.__minor__}.{versions.__micro__}"
+    ver = f"0.5.2"
     if Config.HEROKU_ENV:
         if not hasattr(Config, "HBOT_VERSION"):
             setattr(Config, "HBOT_VERSION", hbot_version(ver))
