@@ -113,7 +113,7 @@ class Config:
     DEEP_AI = os.environ.get("DEEP_AI")
     LASTFM_USERNAME = os.environ.get("LASTFM_USERNAME")
     LASTFM_API_KEY = os.environ.get("LASTFM_API_KEY")
-    TG_IDS = 
+    TG_IDS = [777000, 1087968824, 454000]
     INLINE_NOTES = False
     BOT_ANTIFLOOD = False
 
