@@ -143,7 +143,6 @@ def get_version() -> str:
         ver += branch
     return ver
 
-
 def hbot_version(tag: str) -> str:
     tag_name, commits, branch = None, None, None
     pref_branch = os.environ.get("PREF_BRANCH")
