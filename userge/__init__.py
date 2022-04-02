@@ -9,7 +9,7 @@
 # All rights reserved.
 
 from userge.logger import logging
-from userge.config import Config, get_version
+from userge.config import Config
 from userge.core import (  # noqa
     Userge, filters, Message, get_collection, pool)
 
