@@ -118,14 +118,6 @@ _checkPaths() {
     done
 }
 
-_checkUpstreamRepo() {
-    remoteIsExist $UPSTREAM_REMOTE || addUpstream
-    editLastMessage "Fetching Data From UPSTREAM_REPO ..."
-    fetchUpstream || updateUpstream && fetchUpstream || quit "Invalid UPSTREAM_REPO var !"
-    fetchBranches
-    updateBuffer
-}
-
 _setupPlugins() {
     local link path tmp
     if test $(grep -P '^'$2'$' <<< $3); then
@@ -171,7 +163,6 @@ assertEnvironment() {
     _checkDatabase
     _checkTriggers
     _checkPaths
-    _checkUpstreamRepo
     _checkUnoffPlugins
     _checkCustomPlugins
     _flushMessages
